@@ -1,0 +1,15 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+    <display-name>Vulnerable Web Site</display-name>
+    <servlet>
+        <servlet-name>DirectSqlInjectionServlet</servlet-name>
+        <servlet-class>id.ac.itb.cs.vuln.sqlinjection.DirectSqlInjectionServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DirectSqlInjectionServlet</servlet-name>
+        <url-pattern>/sql/direct</url-pattern>
+    </servlet-mapping>
+</web-app>
