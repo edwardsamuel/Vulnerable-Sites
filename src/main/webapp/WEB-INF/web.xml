@@ -8,8 +8,24 @@
         <servlet-name>DirectSqlInjectionServlet</servlet-name>
         <servlet-class>id.ac.itb.cs.vuln.sqlinjection.DirectSqlInjectionServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>DirectXPathInjection</servlet-name>
+        <servlet-class>id.ac.itb.cs.vuln.xpathinjection.DirectXPathInjection</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>DirectLdapInjectionServlet</servlet-name>
+        <servlet-class>id.ac.itb.cs.vuln.ldapinjection.DirectLdapInjectionServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>DirectSqlInjectionServlet</servlet-name>
         <url-pattern>/sql/direct</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>DirectXPathInjection</servlet-name>
+        <url-pattern>/xpath/direct</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>DirectLdapInjectionServlet</servlet-name>
+        <url-pattern>/ldap/direct</url-pattern>
     </servlet-mapping>
 </web-app>

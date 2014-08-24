@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<users>
+    <user id="1">
+        <fullname>Edward Samuel Pasaribu</fullname>
+        <username>edwardsp</username>
+        <password>lalalala</password>
+        <description></description>
+    </user>
+    <user id="2">
+        <fullname>Raymond Lukanta</fullname>
+        <username>raymondl</username>
+        <password>lalalala</password>
+        <description></description>
+    </user>
+</users>

@@ -56,7 +56,7 @@ public class DirectSqlInjectionServlet extends HttpServlet {
 
             rs = st.executeQuery(query);
             if (rs.next()) {
-                out.println("Logged in as  " + rs.getString("full_name"));
+                out.println("Logged in as  " + StringEscapeUtils.escapeHtml4(rs.getString("full_name")));
             } else {
                 out.println("User not found.");
             }
