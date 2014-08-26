@@ -16,6 +16,38 @@
         <servlet-name>DirectLdapInjectionServlet</servlet-name>
         <servlet-class>id.ac.itb.cs.vuln.ldapinjection.DirectLdapInjectionServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>DirectCommandInjectionServlet</servlet-name>
+        <servlet-class>id.ac.itb.cs.vuln.commandinjection.DirectCommandInjectionServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>DirectXSS1Servlet</servlet-name>
+        <servlet-class>id.ac.itb.cs.vuln.xss1.DirectXSS1Servlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>DirectXSS2Servlet</servlet-name>
+        <servlet-class>id.ac.itb.cs.vuln.xss2.DirectXSS2Servlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>DirectUnvalidatedRedirectServlet</servlet-name>
+        <servlet-class>id.ac.itb.cs.vuln.unvalidatedredirect.DirectUnvalidatedRedirectServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>DirectHttpResponseSplittingServlet</servlet-name>
+        <servlet-class>id.ac.itb.cs.vuln.hrs.DirectHttpResponseSplittingServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>DirectUnvalidatedForwardServlet</servlet-name>
+        <servlet-class>id.ac.itb.cs.vuln.unvalidatedforward.DirectUnvalidatedForwardServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>DirectFileInclusionServlet</servlet-name>
+        <servlet-class>id.ac.itb.cs.vuln.fileinclusion.DirectFileInclusionServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>DirectPathTraversalServlet</servlet-name>
+        <servlet-class>id.ac.itb.cs.vuln.pathtraversal.DirectPathTraversalServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>DirectSqlInjectionServlet</servlet-name>
         <url-pattern>/sql/direct</url-pattern>
@@ -27,5 +59,37 @@
     <servlet-mapping>
         <servlet-name>DirectLdapInjectionServlet</servlet-name>
         <url-pattern>/ldap/direct</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>DirectCommandInjectionServlet</servlet-name>
+        <url-pattern>/command/direct</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>DirectXSS1Servlet</servlet-name>
+        <url-pattern>/xss1/direct</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>DirectXSS2Servlet</servlet-name>
+        <url-pattern>/xss2/direct</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>DirectUnvalidatedRedirectServlet</servlet-name>
+        <url-pattern>/redirect/direct</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>DirectHttpResponseSplittingServlet</servlet-name>
+        <url-pattern>/hrs/direct</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>DirectUnvalidatedForwardServlet</servlet-name>
+        <url-pattern>/forward/direct</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>DirectFileInclusionServlet</servlet-name>
+        <url-pattern>/inclusion/direct</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>DirectPathTraversalServlet</servlet-name>
+        <url-pattern>/path/direct</url-pattern>
     </servlet-mapping>
 </web-app>

@@ -8,6 +8,10 @@
     <name>vulnerable-sites Maven Webapp</name>
     <url>http://maven.apache.org</url>
 
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
     <dependencies>
         <dependency>
             <groupId>junit</groupId>
@@ -44,5 +48,51 @@
 
     <build>
         <finalName>vulnerable-sites</finalName>
+
+        <plugins>
+            <!-- Compile JSP files using Apache Sling -->
+            <plugin>
+                <groupId>org.apache.sling</groupId>
+                <artifactId>maven-jspc-plugin</artifactId>
+                <version>2.0.8</version>
+                <executions>
+                    <execution>
+                        <id>compile-jsp</id>
+                        <goals>
+                            <goal>jspc</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <sourceDirectory>src/main/webapp</sourceDirectory>
+                    <servletPackage>id.ac.itb.cs.vuln.jsp</servletPackage>
+                </configuration>
+            </plugin>
+
+            <!-- Compile JSP files using Mojo JspC -->
+            <!--
+            <plugin>
+                <groupId>org.codehaus.mojo.jspc</groupId>
+                <artifactId>jspc-maven-plugin</artifactId>
+                <version>2.0-alpha-3</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>compile</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-war-plugin</artifactId>
+                <version>2.4</version>
+                <configuration>
+                    <webXml>${pom.basedir}/target/jspweb.xml</webXml>
+                </configuration>
+            </plugin>
+            -->
+        </plugins>
     </build>
 </project>

@@ -23,7 +23,7 @@ public class DirectSqlInjectionServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         req.setAttribute("action", "/sql/direct");
-        RequestDispatcher view = req.getRequestDispatcher("/WEB-INF/views/sql/login.jsp");
+        RequestDispatcher view = req.getRequestDispatcher("/WEB-INF/views/login.jsp");
         view.forward(req, resp);
     }
 

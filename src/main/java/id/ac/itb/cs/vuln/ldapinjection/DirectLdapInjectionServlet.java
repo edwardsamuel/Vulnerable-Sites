@@ -3,6 +3,7 @@ package id.ac.itb.cs.vuln.ldapinjection;
 import com.novell.ldap.*;
 import org.apache.commons.lang3.StringEscapeUtils;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -21,7 +22,7 @@ public class DirectLdapInjectionServlet extends HttpServlet {
 
         out.println("<html>");
         out.println("<head>");
-        out.println("<title>XPath Injection</title>");
+        out.println("<title>LDAP Injection</title>");
         out.println("</head>");
         out.println("<body>");
 
@@ -84,7 +85,9 @@ public class DirectLdapInjectionServlet extends HttpServlet {
     }
 
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        doPost(req, resp);
+        req.setAttribute("action", "/ldap/direct");
+        RequestDispatcher view = req.getRequestDispatcher("/WEB-INF/views/login.jsp");
+        view.forward(req, resp);
     }
 
     public static void main(String[] args) {

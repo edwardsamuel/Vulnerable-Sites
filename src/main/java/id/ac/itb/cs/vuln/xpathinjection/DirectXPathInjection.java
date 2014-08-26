@@ -27,7 +27,7 @@ public class DirectXPathInjection extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         req.setAttribute("action", "/xpath/direct");
-        RequestDispatcher view = req.getRequestDispatcher("/WEB-INF/views/sql/login.jsp");
+        RequestDispatcher view = req.getRequestDispatcher("/WEB-INF/views/login.jsp");
         view.forward(req, resp);
     }
 
