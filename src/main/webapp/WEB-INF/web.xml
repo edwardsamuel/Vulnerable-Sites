@@ -10,7 +10,7 @@
     </servlet>
     <servlet>
         <servlet-name>DirectXPathInjection</servlet-name>
-        <servlet-class>id.ac.itb.cs.vuln.xpathinjection.DirectXPathInjection</servlet-class>
+        <servlet-class>id.ac.itb.cs.vuln.xpathinjection.DirectXPathInjectionServlet</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>DirectLdapInjectionServlet</servlet-name>
@@ -48,9 +48,37 @@
         <servlet-name>DirectPathTraversalServlet</servlet-name>
         <servlet-class>id.ac.itb.cs.vuln.pathtraversal.DirectPathTraversalServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>DaoSqlInjectionServlet</servlet-name>
+        <servlet-class>id.ac.itb.cs.vuln.sqlinjection.DaoSqlInjectionServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>EsapiSqlInjectionServlet</servlet-name>
+        <servlet-class>id.ac.itb.cs.vuln.sqlinjection.EsapiSqlInjectionServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>EscapedHttpResponseSplittingServlet</servlet-name>
+        <servlet-class>id.ac.itb.cs.vuln.hrs.EscapedHttpResponseSplittingServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>RegexPathTraversalServlet</servlet-name>
+        <servlet-class>id.ac.itb.cs.vuln.pathtraversal.RegexPathTraversalServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>EsapiCommandInjectionServlet</servlet-name>
+        <servlet-class>id.ac.itb.cs.vuln.commandinjection.EsapiCommandInjectionServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ValdiatedXPathInjectionServlet</servlet-name>
+        <servlet-class>id.ac.itb.cs.vuln.xpathinjection.ValidatedXPathInjectionServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>DirectSqlInjectionServlet</servlet-name>
         <url-pattern>/sql/direct</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>DaoSqlInjectionServlet</servlet-name>
+        <url-pattern>/sql/dao</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>DirectXPathInjection</servlet-name>

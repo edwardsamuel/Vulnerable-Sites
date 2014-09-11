@@ -45,7 +45,6 @@ public class DirectXSS2Servlet extends HttpServlet {
             ps = con.prepareStatement(query);
             ps.setString(1, username);
 
-            rs = ps.executeQuery();
             if (rs.next()) {
                 out.println("Full name : " + rs.getString("full_name") + "<br />");
                 out.println("Description : <br />");

@@ -22,7 +22,7 @@ import java.util.List;
 /**
  * Created by Edward Samuel on 23/08/14.
  */
-public class DirectXPathInjection extends HttpServlet {
+public class DirectXPathInjectionServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
